@@ -1,0 +1,37 @@
+{
+  "name": "truckloud-nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Szane <szanezhang@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-table": "1.11.0",
+    "bootstrap3-dialog": "^1.35.4",
+    "css-select": "^2.0.0",
+    "dom-converter": "^0.1.4",
+    "htmlparser2": "^3.9.2",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "nuxt": "^1.0.0",
+    "renderkid": "^2.0.1",
+    "semver": "^5.5.1",
+    "store": "^2.0.12",
+    "utila": "^0.5.0-dev.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
