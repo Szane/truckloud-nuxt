@@ -2,7 +2,7 @@
   <div class="page-container">
     <div id="home" class="header-container">
       <div class="logo">
-        <img src="/static/images/homepage/logo_img_1.png" alt="logo">
+        <img src="/images/homepage/logo_img_1.png" alt="logo">
         <div class="title">
           <span>车 队 云 管 家</span>
         </div>
@@ -37,7 +37,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="banner-first-container">
-              <img src="/static/images/homepage/banner_line.png" alt="">
+              <img src="/images/homepage/banner_line.png" alt="">
               <div>
                 <p class="desc">SAAS Based Transportation Management System</p>
                 <p class="desc">for Trucking Company in Container Shipping</p>
@@ -81,7 +81,7 @@
     </div>
     <div id="center" class="center-container">
       <div class="container-title">
-        <img src="/static/images/homepage/center_title.png" alt="center title image">
+        <img src="/images/homepage/center_title.png" alt="center title image">
       </div>
       <div class="center-body">
         <div class="desc">
@@ -98,15 +98,15 @@
             <p style="margin-top: 10px">适用于依托港口，以陆运进出口业务为主营范围的具有一定运力规模的车队。</p>
           </div>
         </div>
-        <img class="icon" src="/static/images/homepage/center_icon.jpg" alt="center icon">
+        <img class="icon" src="/images/homepage/center_icon.jpg" alt="center icon">
       </div>
       <div class="center-bottom">
         <div class="container-title">
-          <img src="/static/images/homepage/center_function.png" alt="center function">
+          <img src="/images/homepage/center_function.png" alt="center function">
         </div>
         <div class="center-function">
           <div class="list-container">
-            <img src="/static/images/homepage/center_function_order.png" alt="">
+            <img src="/images/homepage/center_function_order.png" alt="">
             <div class="desc-list">
               <ul>
                 <li>订单管理</li>
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="list-container">
-            <img src="/static/images/homepage/center_function_location.png" alt="">
+            <img src="/images/homepage/center_function_location.png" alt="">
             <div class="desc-list">
               <ul>
                 <li>行车管理</li>
@@ -126,7 +126,7 @@
             </div>
           </div>
           <div class="list-container">
-            <img src="/static/images/homepage/center_function_setting.png" alt="">
+            <img src="/images/homepage/center_function_setting.png" alt="">
             <div class="desc-list">
               <ul>
                 <li>车辆管理</li>
@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="list-container">
-            <img src="/static/images/homepage/center_function_wechat.png" alt="">
+            <img src="/images/homepage/center_function_wechat.png" alt="">
             <div class="desc-list">
               <ul>
                 <li>微信端接单</li>
@@ -144,7 +144,7 @@
             </div>
           </div>
           <div class="list-container">
-            <img src="/static/images/homepage/center_function_category.png" alt="">
+            <img src="/images/homepage/center_function_category.png" alt="">
             <div class="desc-list">
               <ul>
                 <li>系统管理</li>
@@ -159,13 +159,13 @@
     </div>
     <div class="scene-container">
       <div class="container-title">
-        <img src="/static/images/homepage/scene.png" alt="scene title">
+        <img src="/images/homepage/scene.png" alt="scene title">
       </div>
       <div class="scene-swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="swiper-content-left">
-              <img style="float: left" src="/static/images/homepage/scene_icon1.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon1.png" alt="">
               <div class="content-margin">
                 <p>让车队信息管理脱离传统的手动记录和简单的</p>
                 <p>电子表格，通过互联网实时同步必要的车队</p>
@@ -173,7 +173,7 @@
               </div>
             </div>
             <div class="swiper-content-right">
-              <img style="float: left" src="/static/images/homepage/scene_icon2.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon2.png" alt="">
               <div class="content-margin">
                 <p>让调度从每天繁重的电话沟通中解脱出来</p>
                 <p>只需要在电脑屏幕前就可以轻松完成运</p>
@@ -181,7 +181,7 @@
               </div>
             </div>
             <div class="swiper-content-left">
-              <img style="float: left" src="/static/images/homepage/scene_icon3.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon3.png" alt="">
               <div class="content-margin">
                 <p>司机通过手机微信端绑定账号，并通过关注车</p>
                 <p>队服务号来完成运输任务及绩效考核，最大</p>
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="swiper-content-right">
-              <img style="float: left" src="/static/images/homepage/scene_icon4.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon4.png" alt="">
               <div class="content-margin">
                 <p>司机通过手机微信端主动抢单并参与运输任</p>
                 <p>务，减少了调度分配的工作量，提高了</p>
@@ -199,7 +199,7 @@
           </div>
           <div class="swiper-slide">
             <div class="swiper-content-left">
-              <img style="float: left" src="/static/images/homepage/scene_icon5.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon5.png" alt="">
               <div class="content-margin">
                 <p>客户只要通过订单号就能对运单的运输节点对</p>
                 <p>运输车辆的实时位置进行查询，避免了客户</p>
@@ -207,7 +207,7 @@
               </div>
             </div>
             <div class="swiper-content-right">
-              <img style="float: left" src="/static/images/homepage/scene_icon6.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon6.png" alt="">
               <div class="content-margin" style="width: 600px">
                 <p>通过车辆轨迹，实时位置以及电子围栏功能等技术，</p>
                 <p>可以通过微信提醒和短信功能给司机推送重要节点</p>
@@ -215,7 +215,7 @@
               </div>
             </div>
             <div class="swiper-content-left">
-              <img style="float: left" src="/static/images/homepage/scene_icon7.png" alt="">
+              <img style="float: left" src="/images/homepage/scene_icon7.png" alt="">
               <div class="content-margin">
                 <p>公司与客户对账，公司与司机对账，通过筛选</p>
                 <p>条件的控制，使账单更有针对性。</p>
@@ -228,12 +228,12 @@
     </div>
     <div id="advantage" class="advantage-container">
       <div class="container-title">
-        <img src="/static/images/homepage/advantage.png" alt="advantage">
+        <img src="/images/homepage/advantage.png" alt="advantage">
       </div>
       <div class="advantage-list">
         <div class="advantage-block">
           <div class="container-title">
-            <img src="/static/images/homepage/advantage_network.png" alt="">
+            <img src="/images/homepage/advantage_network.png" alt="">
           </div>
           <div class="desc">
             <p>开通后<b>立即</b>可以上网使用</p>
@@ -243,7 +243,7 @@
         </div>
         <div class="advantage-block">
           <div class="container-title">
-            <img src="/static/images/homepage/advantage_money.png" alt="">
+            <img src="/images/homepage/advantage_money.png" alt="">
           </div>
           <div class="desc">
             <p>花<b>很少的钱</b>就可以实现<b>互联网</b></p>
@@ -252,7 +252,7 @@
         </div>
         <div class="advantage-block">
           <div class="container-title">
-            <img src="/static/images/homepage/advantage_wechat.png" alt="">
+            <img src="/images/homepage/advantage_wechat.png" alt="">
           </div>
           <div class="desc">
             <p><b>不需要</b>懂IT，界面简单易懂</p>
@@ -264,7 +264,7 @@
     </div>
     <div id="free" class="free-container">
       <div class="container-title">
-        <img src="/static/images/homepage/free.png" alt="free title">
+        <img src="/images/homepage/free.png" alt="free title">
       </div>
       <div class="free-contact">
         <div class="title">
@@ -309,13 +309,13 @@
         </div>
       </div>
       <div class="free-show">
-        <img src="/static/images/homepage/free_desc_1.jpg" alt="">
+        <img src="/images/homepage/free_desc_1.jpg" alt="">
       </div>
     </div>
     <div id="about" class="footer-container">
       <div class="company-wechat">
         <div>
-          <img src="/static/images/homepage/about_wechat_1.png" alt="">
+          <img src="/images/homepage/about_wechat_1.png" alt="">
         </div>
         <div class="wechat">
           <span>微信公众号</span>
@@ -450,7 +450,7 @@
               </div>
             </div>
             <div style="margin-top: 50px;margin-left: 550px">
-              <img src="/static/images/homepage/free_desc_1.jpg" alt="">
+              <img src="/images/homepage/free_desc_1.jpg" alt="">
             </div>
           </div>
         </div>
@@ -487,7 +487,7 @@
         containerPhotoUrl: null,
         sealPhotoUrl: null,
         images: [
-          '/static/images/homepage/banner_1.jpg'
+          '/images/homepage/banner_1.jpg'
         ],
         tabIndex: 0
       }
@@ -766,7 +766,7 @@
           let marker = new AMap.Marker({
             map: map,
             position: [lng, lat],
-            icon: "/static/images/location/truck.png",
+            icon: "/images/location/truck.png",
             offset: new AMap.Pixel(-36, -12),
             autoRotation: true
           });
@@ -885,7 +885,7 @@
   .banner-first-container {
     height: 560px;
     padding-left: 460px;
-    background-image: url(/static/images/homepage/banner_bg_1.jpg);
+    background-image: url(/images/homepage/banner_bg_1.jpg);
   }
 
   .banner-first-container img {
@@ -921,7 +921,7 @@
     height: 560px;
     padding-top: 205px;
     padding-left: 430px;
-    background-image: url(/static/images/homepage/banner_bg_2.jpg);
+    background-image: url(/images/homepage/banner_bg_2.jpg);
   }
 
   .banner-second-container .desc1 {
@@ -940,7 +940,7 @@
     padding-top: 220px;
     padding-left: 460px;
     height: 560px;
-    background-image: url(/static/images/homepage/banner_bg_3_2.jpg);
+    background-image: url(/images/homepage/banner_bg_3_2.jpg);
   }
 
   .banner-third-container .desc1 {
@@ -958,7 +958,7 @@
   .search-container {
     margin: 20px 0px 0px -330px;
     padding: 0px;
-    background-image: url(/static/images/homepage/search_bg.jpg);
+    background-image: url(/images/homepage/search_bg.jpg);
     height: 120px;
   }
 
@@ -1096,12 +1096,12 @@
   }
 
   .swiper-button-prev {
-    background-image: url("/static/images/homepage/banner_left_button.png");
+    background-image: url("/images/homepage/banner_left_button.png");
     margin-left: 360px;
   }
 
   .swiper-button-next {
-    background-image: url("/static/images/homepage/banner_right_button.png");
+    background-image: url("/images/homepage/banner_right_button.png");
     margin-right: 360px;
   }
 
@@ -1132,7 +1132,7 @@
     margin-left: -320px;
     padding-top: 40px;
     height: 440px;
-    background-image: url(/static/images/homepage/search_bg.jpg);
+    background-image: url(/images/homepage/search_bg.jpg);
     overflow: hidden;
   }
 
@@ -1216,7 +1216,7 @@
     color: white;
     width: 200px;
     height: 34px;
-    background-image: url(/static/images/homepage/free_submit.png);
+    background-image: url(/images/homepage/free_submit.png);
     border: none;
     outline: none;
   }
@@ -1306,29 +1306,29 @@
   .consult {
     width: 58px;
     height: 58px;
-    background-image: url("/static/images/homepage/consult.png");
+    background-image: url("/images/homepage/consult.png");
     cursor: pointer;
   }
 
   .consult:hover {
-    background-image: url("/static/images/homepage/consult_hover.png");
+    background-image: url("/images/homepage/consult_hover.png");
   }
 
   .free-trial {
     width: 58px;
     height: 58px;
-    background-image: url("/static/images/homepage/free_trial.png");
+    background-image: url("/images/homepage/free_trial.png");
     cursor: pointer;
   }
 
   .free-trial:hover {
-    background-image: url("/static/images/homepage/free_trial_hover.png");
+    background-image: url("/images/homepage/free_trial_hover.png");
   }
 
   .go-top {
     width: 58px;
     height: 58px;
-    background-image: url("/static/images/homepage/top.png");
+    background-image: url("/images/homepage/top.png");
     cursor: pointer;
   }
 
@@ -1373,7 +1373,7 @@
     color: white;
     width: 200px;
     height: 34px;
-    background-image: url(/static/images/homepage/free_submit.png);
+    background-image: url(/images/homepage/free_submit.png);
     border: none;
     outline: none;
   }

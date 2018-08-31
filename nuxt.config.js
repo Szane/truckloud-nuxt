@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   /*
   ** Headers of the page
@@ -24,6 +25,17 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    plugins: [
+      // new HtmlWebpackPlugin({
+      //   filename: 'index.html',
+      //   template: 'index.ejs',
+      //   title: '车队云管家',
+      //   minify: {
+      //     removeComments: false,
+      //     collapseWhitespace: false
+      //   }
+      // })
+    ],
     /*
     ** Run ESLint on save
     */
