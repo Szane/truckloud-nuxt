@@ -1,17 +1,17 @@
-let store = require('store');
-let BootstrapDialog = require('bootstrap3-dialog');
-window.Parsley
-    .addValidator('phone', {
-        requirementType: 'string',
-        validateString: function (value, requirement) {
-            if (!requirement) return requirement;
-            return /^1[3|4|5|7|8][0-9]\d{8}$/.test(value);
-        },
-        messages: {
-            en: 'input the mobile NO.',
-            'zh-cn': '请输入正确的手机号码'
-        }
-    });
+// let store = require('~/plugins/store');
+// let BootstrapDialog = require('~/plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
+// window.Parsley
+//     .addValidator('phone', {
+//         requirementType: 'string',
+//         validateString: function (value, requirement) {
+//             if (!requirement) return requirement;
+//             return /^1[3|4|5|7|8][0-9]\d{8}$/.test(value);
+//         },
+//         messages: {
+//             en: 'input the mobile NO.',
+//             'zh-cn': '请输入正确的手机号码'
+//         }
+//     });
 
 //两端去空格函数
 String.prototype.trim = function () {
@@ -1343,4 +1343,23 @@ exports.isVehicleNumber = function (number) {
         result = express.test(number);
     }
     return result;
+};
+
+//判断是否是手机
+exports.isMobile = function() {
+    let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+    return flag;
+};
+
+exports.baiduSeoAutoPush = function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
 };
