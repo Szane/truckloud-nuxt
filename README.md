@@ -1,4 +1,4 @@
-# truckloud-nuxt
+# nuxt-test
 
 > Nuxt.js project
 
