@@ -16,6 +16,8 @@ module.exports = {
   css: [
     '~/plugins/bootstrap/dist/css/bootstrap.css',
     '~/plugins/swiper/src/css/swiper.css',
+    '~/plugins/bootstrap-table/dist/bootstrap-table.min.css',
+    '~/plugins/imageviewer/dist/viewer.css',
     // '~/plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css'
   ],
   plugins: [
@@ -23,6 +25,8 @@ module.exports = {
     { src: '~/plugins/swiper/src/js/swiper.min.js', ssr: false },
     { src: '~/plugins/jquery/jquery-1.9.1.min.js', ssr: false },
     { src: '~/plugins/bootstrap/dist/js/bootstrap.min.js', ssr: false },
+    { src: '~/plugins/bootstrap-table/dist/bootstrap-table.min.js', ssr: false },
+    { src: '~/plugins/imageviewer/dist/viewer.min.js', ssr: false },
     // { src: '~/plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js', ssr: false },
 
   ],
