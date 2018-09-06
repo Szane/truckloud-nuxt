@@ -15,12 +15,12 @@ module.exports = {
   },
   css: [
     '~/plugins/bootstrap/dist/css/bootstrap.css',
-    '~/plugins/swiper/dist/css/swiper.css',
+    '~/plugins/swiper/src/css/swiper.css',
     // '~/plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css'
   ],
   plugins: [
     { src: '~/plugins/element-ui', ssr: false },
-    { src: '~/plugins/swiper/dist/js/swiper.min.js', ssr: false },
+    { src: '~/plugins/swiper/src/js/swiper.min.js', ssr: false },
     { src: '~/plugins/jquery/jquery-1.9.1.min.js', ssr: false },
     { src: '~/plugins/bootstrap/dist/js/bootstrap.min.js', ssr: false },
     // { src: '~/plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js', ssr: false },

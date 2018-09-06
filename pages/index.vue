@@ -9,13 +9,26 @@
       </div>
       <div class="menu-container">
         <ul>
-          <li id="li-home"><a href="#home" data-click="scroll-to-target"  v-bind:class="{'menu-normal': tabIndex != 0,'menu-selected': tabIndex == 0 }">首页</a></li>
-          <li id="li-search"><a href="#search" data-click="scroll-to-target" v-bind:class="{'menu-normal': tabIndex != 1,'menu-selected': tabIndex == 1 }">SO号查询</a></li>
-          <li id="li-center"><a href="#center" data-click="scroll-to-target" v-bind:class="{'menu-normal': tabIndex != 2,'menu-selected': tabIndex == 2 }">产品中心</a></li>
-          <li id="li-advantage"><a href="#advantage" data-click="scroll-to-target" v-bind:class="{'menu-normal': tabIndex != 3,'menu-selected': tabIndex == 3 }">方案优势</a></li>
-          <li id="li-free"><a href="#free" data-click="scroll-to-target" v-bind:class="{'menu-normal': tabIndex != 4,'menu-selected': tabIndex == 4 }">免费试用</a></li>
-          <li id="li-about"><a href="#about" data-click="scroll-to-target" v-bind:class="{'menu-normal': tabIndex != 5,'menu-selected': tabIndex == 5 }">联系我们</a></li>
-          <li><button @click="gotoLogin">登录</button></li>
+          <li id="li-home"><a href="#home" data-click="scroll-to-target"
+                              v-bind:class="{'menu-normal': tabIndex != 0,'menu-selected': tabIndex == 0 }">首页</a></li>
+          <li id="li-search"><a href="#search" data-click="scroll-to-target"
+                                v-bind:class="{'menu-normal': tabIndex != 1,'menu-selected': tabIndex == 1 }">SO号查询</a>
+          </li>
+          <li id="li-center"><a href="#center" data-click="scroll-to-target"
+                                v-bind:class="{'menu-normal': tabIndex != 2,'menu-selected': tabIndex == 2 }">产品中心</a>
+          </li>
+          <li id="li-advantage"><a href="#advantage" data-click="scroll-to-target"
+                                   v-bind:class="{'menu-normal': tabIndex != 3,'menu-selected': tabIndex == 3 }">方案优势</a>
+          </li>
+          <li id="li-free"><a href="#free" data-click="scroll-to-target"
+                              v-bind:class="{'menu-normal': tabIndex != 4,'menu-selected': tabIndex == 4 }">免费试用</a>
+          </li>
+          <li id="li-about"><a href="#about" data-click="scroll-to-target"
+                               v-bind:class="{'menu-normal': tabIndex != 5,'menu-selected': tabIndex == 5 }">联系我们</a>
+          </li>
+          <li>
+            <button @click="gotoLogin">登录</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -44,7 +57,7 @@
           <div class="swiper-slide">
             <div class="banner-third-container">
               <p class="desc1">化繁为简，司机只需用微信接单。</p>
-              <p class="desc2">Complex tasks turn simple.  A driver only needs</p>
+              <p class="desc2">Complex tasks turn simple. A driver only needs</p>
               <p class="desc2">to use Wechat to accept orders.</p>
             </div>
           </div>
@@ -73,7 +86,7 @@
       <div class="center-body">
         <div class="desc">
           <div class="title">
-            <span >产品简介&适用人群</span>
+            <span>产品简介&适用人群</span>
           </div>
           <hr>
           <div class="center-content">
@@ -220,7 +233,7 @@
       <div class="advantage-list">
         <div class="advantage-block">
           <div class="container-title">
-            <img  src="/images/homepage/advantage_network.png" alt="">
+            <img src="/images/homepage/advantage_network.png" alt="">
           </div>
           <div class="desc">
             <p>开通后<b>立即</b>可以上网使用</p>
@@ -495,12 +508,8 @@
         }
       }
     },
-    async asyncData({ params }) {
-      let { data } = await request.post(transNodeApiUrl + 'i', {})
-      console.log(data.info.data);
-      return { data: data.info.data }
-    },
-    mounted: function() {
+
+    mounted: function () {
       let _self = this;
       let $table = $('#orderTable');
 
@@ -574,21 +583,18 @@
         common.changeTableClass($table)
       }
 
-      function getInit() {
-        _self.$http.post(transNodeApiUrl + 'i', {}).then((response) => {
-          _self.pagePara = response.data.info;
-          initTable();
-        }, (response) => {
-          common.dealErrorCommon(_self, response)
-        })
-      }
+      let getInit = async () => {
+        let response = await request.post(transNodeApiUrl + 'i', {});
+        _self.pagePara = response.data.info;
+        initTable();
+      };
 
       function initPage() {
         //let page horizontally
 //        window.scrollTo((document.body.scrollWidth-document.body.offsetWidth)/2,0);
-//        getInit();
+        getInit();
         _self.initSwiper();
-//        common.initImageViewer();
+        common.initImageViewer();
       }
 
       $(function () {
@@ -596,22 +602,22 @@
 //        common.baiduSeoAutoPush()
       });
 
-      $("#li-home").on("click",function(){
+      $("#li-home").on("click", function () {
         _self.tabIndex = 0;
       });
-      $("#li-search").on("click",function(){
+      $("#li-search").on("click", function () {
         _self.tabIndex = 1;
       });
-      $("#li-center").on("click",function(){
+      $("#li-center").on("click", function () {
         _self.tabIndex = 2;
       });
-      $("#li-advantage").on("click",function(){
+      $("#li-advantage").on("click", function () {
         _self.tabIndex = 3;
       });
-      $("#li-free").on("click",function(){
+      $("#li-free").on("click", function () {
         _self.tabIndex = 4;
       });
-      $("#li-about").on("click",function(){
+      $("#li-about").on("click", function () {
         _self.tabIndex = 5;
       });
     },
@@ -626,7 +632,7 @@
           paginationType: 'bullets',
           paginationClickable: true,
           autoplay: 5000,
-          speed:3500,
+          speed: 3500,
           grabCursor: true,
           autoplayDisableOnInteraction: false
         });
@@ -638,12 +644,12 @@
           paginationType: 'bullets',
           paginationClickable: true,
           autoplay: 5000,
-          speed:3500,
+          speed: 3500,
           grabCursor: true,
           autoplayDisableOnInteraction: false
         });
       },
-      submitContact: function () {
+      submitContact: async function () {
         let _self = this;
         if (!_self.submitData.contact_log_org_name) {
           this.$message({
@@ -671,20 +677,16 @@
           });
           return;
         }
-
-        _self.$http.post(apiUrl + 'c', _self.submitData).then((response) => {
-          $('#freeTrialModal').modal('hide');
-          if (response.data.errno == 0) {
-            this.$alert('联系信息已提交！', '提示', {
-              confirmButtonText: '确定'
-            });
-            _self.submitData = {};
-          } else {
+        let response = await request.post(apiUrl + 'c', _self.submitData);
+        $('#freeTrialModal').modal('hide');
+        if (response.data.errno === 0) {
+          this.$alert('联系信息已提交！', '提示', {
+            confirmButtonText: '确定'
+          });
+          _self.submitData = {};
+        } else {
 //            common.dealWarningCommon(response.data.msg);
-          }
-        }, (response) => {
-          common.dealErrorCommon(_self, response);
-        });
+        }
       },
       gotoLogin: function () {
         window.open('http://demo.truckloud.com');
@@ -700,7 +702,7 @@
         $('#freeTrialModal').modal('show');
       },
       goTop: function () {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
       },
       formatDate: function (date) {
         return common.dateFormat(date, 'min');
@@ -709,7 +711,7 @@
         let _self = this;
         _self.transNode = [];
       },
-      searchSoCode: function () {
+      searchSoCode: async function () {
         let _self = this;
         let soCode = _self.order_so_code;
         if (!soCode) {
@@ -723,24 +725,20 @@
         let params = {
           order_so_code: soCode
         };
-        _self.$http.post(transNodeApiUrl + 'qo', params).then((response) => {
-          let _self = this;
-          _self.orderList = response.data.info;
-          _self.transNode = [];
-          $('#orderTable').bootstrapTable('load', _self.orderList);
-          if (_self.orderList.length <= 0) {
-            this.$message({
-              message: '查询的SO号无结果!',
-              type: 'warning'
-            });
-          } else {
-            $('#soSearchModal').modal('show');
-          }
-        }, (response) => {
-//          common.dealErrorCommon(_self, response)
-        })
+        let response = await request.post(transNodeApiUrl + 'qo', params);
+        _self.orderList = response.data.info;
+        _self.transNode = [];
+        $('#orderTable').bootstrapTable('load', _self.orderList);
+        if (_self.orderList.length <= 0) {
+          this.$message({
+            message: '查询的SO号无结果!',
+            type: 'warning'
+          });
+        } else {
+          $('#soSearchModal').modal('show');
+        }
       },
-      getNodeInfo: function (orderId) {
+      getNodeInfo: async function (orderId) {
         let _self = this;
 
         let params = {
@@ -748,72 +746,67 @@
         };
 
         //获取运输节点
-        _self.$http.post(transNodeApiUrl + 'gq', params).then((response) => {
-          _self.transNode = response.data.info;
-        }, (response) => {
-//          common.dealErrorCommon(_self, response)
-        });
+        let response1 = await request.post(transNodeApiUrl + 'gq', params);
+        _self.transNode = response1.data.info;
 
         if (_self.orderState == 90) {//已完成订单不显示司机位置
           return;
         }
 
         //获取经纬度
-        _self.$http.post(transNodeApiUrl + 'dl', params).then((response) => {
-          let lng = response.data.info.lng;
-          let lat = response.data.info.lat;
+        let response = await request.post(transNodeApiUrl + 'gq', params);
+        let lng = response.data.info.lng;
+        let lat = response.data.info.lat;
 
-          let map = new AMap.Map('mapContainer', {
-            resizeEnable: true,
-            center: [lng, lat],
-            zoom: 17
-          });
-
-          AMap.plugin('AMap.ToolBar', function () {
-            let toolbar = new AMap.ToolBar();
-            map.addControl(toolbar)
-          });
-
-          let marker = new AMap.Marker({
-            map: map,
-            position: [lng, lat],
-            icon: "/images/location/truck.png",
-            offset: new AMap.Pixel(-36, -12),
-            autoRotation: true
-          });
-
-          let geocoder = new AMap.Geocoder({
-            radius: 1000,
-            extensions: "all"
-          });
-
-          geocoder.getAddress([lng, lat], function (status, result) {
-            if (status === 'complete' && result.info === 'OK') {
-              let address = result.regeocode.formattedAddress;
-              let content = [];
-              content.push("地理位置: " + address);
-              content.push("经纬度:（" + lng.toFixed(4) + ", " + lat.toFixed(4) + "）");
-              let infoWindow = new AMap.InfoWindow({
-                content: content.join("<br/>"),
-                offset: {x: 0, y: -5}
-              });
-              infoWindow.open(map, marker.getPosition());
-              marker.on("mouseover", function (e) {
-                infoWindow.open(map, marker.getPosition());
-              });
-            }
-          });
-
-          map.setFitView();
-
-        }, (response) => {
-//          common.dealErrorCommon(_self, response)
+        let map = new AMap.Map('mapContainer', {
+          resizeEnable: true,
+          center: [lng, lat],
+          zoom: 17
         });
 
+        AMap.plugin('AMap.ToolBar', function () {
+          let toolbar = new AMap.ToolBar();
+          map.addControl(toolbar)
+        });
+
+        let marker = new AMap.Marker({
+          map: map,
+          position: [lng, lat],
+          icon: "/images/location/truck.png",
+          offset: new AMap.Pixel(-36, -12),
+          autoRotation: true
+        });
+
+        let geocoder = new AMap.Geocoder({
+          radius: 1000,
+          extensions: "all"
+        });
+
+        geocoder.getAddress([lng, lat], function (status, result) {
+          if (status === 'complete' && result.info === 'OK') {
+            let address = result.regeocode.formattedAddress;
+            let content = [];
+            content.push("地理位置: " + address);
+            content.push("经纬度:（" + lng.toFixed(4) + ", " + lat.toFixed(4) + "）");
+            let infoWindow = new AMap.InfoWindow({
+              content: content.join("<br/>"),
+              offset: {x: 0, y: -5}
+            });
+            infoWindow.open(map, marker.getPosition());
+            marker.on("mouseover", function (e) {
+              infoWindow.open(map, marker.getPosition());
+            });
+          }
+        });
+
+        map.setFitView();
+
       },
-      talkWithQQ: function () {
-        window.open("http://wpa.qq.com/msgrd?v=3&uin=3444745254&site=qq&menu=yes","_blank");
-      }
+      talkWithQQ:
+
+        function () {
+          window.open("http://wpa.qq.com/msgrd?v=3&uin=3444745254&site=qq&menu=yes", "_blank");
+        }
     }
   }
 </script>
@@ -829,6 +822,7 @@
     margin: auto;
     overflow: hidden;
   }
+
   .header-container {
     height: 100px;
     z-index: 99;
@@ -836,137 +830,165 @@
     /*-moz-box-shadow: 0px 0px 5px #888888;*/
     /*-webkit-box-shadow: 0px 0px 5px #888888;*/
   }
+
   .logo {
     padding-left: 80px;
     padding-top: 12px;
     width: 370px;
     float: left;
   }
+
   .logo .title {
     font-size: 17px;
     color: black;
     margin-left: 5px;
   }
+
   .menu-container {
     padding-left: 0px;
     padding-top: 40px;
     float: left;
   }
+
   .menu-normal {
     color: black;
   }
+
   .menu-selected {
     color: #1b619d;
   }
+
   .header-container ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
+
   .header-container li {
     margin-left: 50px;
     font-size: 18px;
-    display:inline;
+    display: inline;
   }
-  .header-container button{
-    cursor:pointer;
+
+  .header-container button {
+    cursor: pointer;
     background: #15609f;
     color: white;
     outline: none
   }
+
   .full-width {
     width: 100%;
   }
+
   .banner-container {
     height: 560px;
     overflow: hidden;
   }
+
   .banner-first-container {
     height: 560px;
     padding-left: 460px;
-    background-image:url(/images/homepage/banner_bg_1.jpg);
+    background-image: url(/images/homepage/banner_bg_1.jpg);
   }
+
   .banner-first-container img {
     margin-top: 130px;
     margin-bottom: 20px;
   }
+
   .banner-first-container .desc {
     font-size: 28px;
     color: white;
     margin-bottom: -10px;
   }
+
   .banner-first-container .desc1 {
     font-size: 24px;
     color: #215cb2;
     margin-top: 10px;
   }
+
   .banner-first-container .desc1 {
     font-size: 24px;
     color: #215cb2;
     margin-top: 10px;
     margin-bottom: 0px;
   }
+
   .banner-first-container .desc2 {
     font-size: 36px;
     color: #215cb2;
   }
+
   .banner-second-container {
     height: 560px;
     padding-top: 205px;
     padding-left: 430px;
-    background-image:url(/images/homepage/banner_bg_2.jpg);
+    background-image: url(/images/homepage/banner_bg_2.jpg);
   }
+
   .banner-second-container .desc1 {
     font-size: 36px;
     color: white;
     margin-bottom: -2px;
   }
+
   .banner-second-container .desc2 {
     font-size: 28px;
     color: white;
     margin-bottom: -10px;
   }
+
   .banner-third-container {
     padding-top: 220px;
     padding-left: 460px;
     height: 560px;
-    background-image:url(/images/homepage/banner_bg_3_2.jpg);
+    background-image: url(/images/homepage/banner_bg_3_2.jpg);
   }
+
   .banner-third-container .desc1 {
     font-size: 36px;
     color: white;
     margin-bottom: 10px;
   }
+
   .banner-third-container .desc2 {
     font-size: 28px;
     color: white;
     margin-bottom: -10px;
   }
+
   .search-container {
     margin: 20px 0px 0px -330px;
     padding: 0px;
-    background-image:url(/images/homepage/search_bg.jpg);
+    background-image: url(/images/homepage/search_bg.jpg);
     height: 120px;
   }
+
   .search-title-container {
     margin-left: 430px;
     padding-top: 32px;
     float: left;
   }
+
   .search-title {
     font-size: 28px;
     color: white;
   }
+
   .search-des {
     margin-top: -15px;
     font-size: 18px;
     color: white;
   }
+
   .input-group {
     margin-top: 20px;
     margin-left: 1090px;
     padding-top: 35px;
   }
+
   .search-input {
     font-size: 18px;
     width: 320px;
@@ -975,31 +997,37 @@
     outline: none;
     float: left;
   }
+
   .search-button {
     color: white;
     background-color: #0c5fa1;
     border: none;
-    outline:none;
+    outline: none;
     font-size: 30px;
     float: left;
     height: 50px;
     width: 80px;
   }
+
   .center-container {
     padding-top: 50px;
   }
+
   .container-title {
-    text-align:center;
+    text-align: center;
   }
+
   .center-body {
     padding-top: 30px;
     position: relative;
   }
+
   .center-body .icon {
     position: absolute;
     left: 40px;
     top: 60px;
   }
+
   .center-body .desc {
     margin-left: 440px;
     width: 800px;
@@ -1008,49 +1036,60 @@
     padding-top: 50px;
     padding-left: 90px;
   }
+
   .center-body .desc .title {
     color: #292929;
     font-size: 24px;
     font-weight: bold
   }
+
   .center-body .desc hr {
     width: 40px;
     margin-left: 0px;
-    border:none;
-    border-top:2px solid #292929;
+    border: none;
+    border-top: 2px solid #292929;
   }
+
   .center-content {
     font-size: 18px;
     color: #666666;
     margin-right: 10px;
     line-height: 35px;
   }
+
   .center-content p {
     margin: 0px;
   }
+
   .center-bottom {
     padding-top: 50px;
     height: 375px;
   }
+
   .center-function {
     padding-left: -20px;
     padding-top: 30px;
   }
+
   .center-function .list-container {
     float: left;
     margin-left: 125px;
   }
+
   .list-container .desc-list {
     font-size: 18px;
     color: black;
   }
+
   .desc-list ul {
     margin-left: -20px;
     padding-top: 20px;
   }
+
   .desc-list li {
     line-height: 28px;
   }
+
   .swiper-container {
     width: 1920px;
     height: 100%;
@@ -1058,14 +1097,17 @@
     margin-right: 0px;
 
   }
+
   .swiper-button-prev {
     background-image: url("/images/homepage/banner_left_button.png");
     margin-left: 360px;
   }
+
   .swiper-button-next {
     background-image: url("/images/homepage/banner_right_button.png");
     margin-right: 360px;
   }
+
   .swiper-content-left {
     margin-left: 390px;
     margin-top: 50px;
@@ -1074,6 +1116,7 @@
     width: 550px;
     float: left
   }
+
   .swiper-content-right {
     margin-left: 70px;
     margin-top: 50px;
@@ -1082,9 +1125,11 @@
     width: 550px;
     float: left
   }
+
   .content-margin {
     margin-left: 190px
   }
+
   .scene-container {
     width: 1920px;
     margin-left: -320px;
@@ -1093,37 +1138,46 @@
     background-image: url(/images/homepage/search_bg.jpg);
     overflow: hidden;
   }
+
   .scene-swiper-container {
     width: 100%;
     height: 100%;
   }
+
   .scene-swiper-pagination {
     text-align: center;
     margin-top: -50px;
   }
+
   .advantage-container {
     padding-top: 50px;
     height: 460px;
   }
+
   .advantage-list {
     margin-left: 15px;
     margin-top: 40px;
   }
+
   .advantage-block {
     margin-left: 150px;
     float: left;
   }
+
   .advantage-block p {
     font-size: 18px;
   }
+
   .advantage-block .desc {
     margin-top: 20px;
     color: black;
   }
+
   .free-container {
     padding-top: 60px;
     height: 680px;
   }
+
   .free-contact {
     margin-top: 50px;
     margin-left: 110px;
@@ -1131,23 +1185,27 @@
     height: 450px;
     float: left;
   }
+
   .free-contact .title {
     font-size: 28px;
     font-weight: bold;
     color: black;
     text-align: center;
   }
+
   .free-contact .row-input {
     font-size: 18px;
     color: black;
     margin-bottom: 15px;
   }
+
   .free-contact hr {
     margin-left: 80px;
     width: 280px;
-    border:none;
-    border-top:1px solid #292929;
+    border: none;
+    border-top: 1px solid #292929;
   }
+
   .free-contact .row-input input {
     margin-left: 30px;
     width: 320px;
@@ -1156,6 +1214,7 @@
     font-size: 14px;
     padding-left: 15px;
   }
+
   .free-contact button {
     margin-top: 10px;
     color: white;
@@ -1163,12 +1222,14 @@
     height: 34px;
     background-image: url(/images/homepage/free_submit.png);
     border: none;
-    outline:none;
+    outline: none;
   }
+
   .free-show {
     margin-top: 75px;
     margin-left: 645px;
   }
+
   .footer-container {
     padding: 0px;
     width: 1920px;
@@ -1176,15 +1237,18 @@
     height: 200px;
     background: #32404b;
   }
+
   .company-container {
     font-size: 18px;
     color: white;
     margin-left: 633px;
     padding-top: 50px;
   }
+
   .company-container .info {
     margin-top: 15px;
   }
+
   .company-wechat {
     padding-top: 26px;
     padding-bottom: 26px;
@@ -1192,12 +1256,14 @@
     width: 120px;
     position: absolute;
   }
+
   .company-wechat .wechat {
     font-size: 18px;
     text-align: center;
     color: white;
     margin-top: 10px;
   }
+
   .copy-right {
     width: 1920px;
     margin-left: -320px;
@@ -1208,6 +1274,7 @@
     color: #dbdbdb;
     line-height: 40px;
   }
+
   /*search so*/
   .trans-node-container {
     margin: 0px 10px 0px 20px;
@@ -1239,29 +1306,34 @@
     height: 100px;
     display: inline-block;
   }
+
   .consult {
     width: 58px;
     height: 58px;
     background-image: url("/images/homepage/consult.png");
-    cursor:pointer;
+    cursor: pointer;
   }
+
   .consult:hover {
     background-image: url("/images/homepage/consult_hover.png");
   }
+
   .free-trial {
     width: 58px;
     height: 58px;
     background-image: url("/images/homepage/free_trial.png");
-    cursor:pointer;
+    cursor: pointer;
   }
+
   .free-trial:hover {
     background-image: url("/images/homepage/free_trial_hover.png");
   }
+
   .go-top {
     width: 58px;
     height: 58px;
     background-image: url("/images/homepage/top.png");
-    cursor:pointer;
+    cursor: pointer;
   }
 
   /*pop submit*/
@@ -1271,23 +1343,27 @@
     height: 450px;
     float: left;
   }
+
   .pop-free-contact .title {
     font-size: 28px;
     font-weight: bold;
     color: black;
     text-align: center;
   }
+
   .pop-free-contact .row-input {
     font-size: 18px;
     color: black;
     margin-bottom: 15px;
   }
+
   .pop-free-contact hr {
     margin-left: 80px;
     width: 280px;
-    border:none;
-    border-top:1px solid #292929;
+    border: none;
+    border-top: 1px solid #292929;
   }
+
   .pop-free-contact .row-input input {
     margin-left: 30px;
     width: 320px;
@@ -1296,6 +1372,7 @@
     font-size: 14px;
     padding-left: 15px;
   }
+
   .pop-free-contact button {
     margin-top: 10px;
     color: white;
@@ -1303,13 +1380,14 @@
     height: 34px;
     background-image: url(/images/homepage/free_submit.png);
     border: none;
-    outline:none;
+    outline: none;
   }
+
   .float-menu-container {
     position: fixed;
     right: 20px;
     top: 400px;
-    z-index:150;
+    z-index: 150;
     height: 100px
   }
 
