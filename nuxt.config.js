@@ -18,6 +18,7 @@ module.exports = {
     '~/plugins/swiper/src/css/swiper.css',
     '~/plugins/bootstrap-table/dist/bootstrap-table.min.css',
     '~/plugins/imageviewer/dist/viewer.css',
+    '~/plugins/font-awesome/css/font-awesome.min.css'
     // '~/plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css'
   ],
   plugins: [
