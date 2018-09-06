@@ -460,7 +460,7 @@
   const common = require('assets/js/common');
   const apiUrl = '/api/log/ContactLog?method=';
   const transNodeApiUrl = '/api/guest/TransNode?method=';
-//  import request from '~/plugins/request'
+  import request from '~/plugins/request'
 
   export default {
     data() {
@@ -495,10 +495,11 @@
         }
       }
     },
-//    async asyncData({ params }) {
-//      let { data } = await request.post(transNodeApiUrl + 'i', {})
-//      return { data: data.info.data }
-//    },
+    async asyncData({ params }) {
+      let { data } = await request.post(transNodeApiUrl + 'i', {})
+      console.log(data.info.data);
+      return { data: data.info.data }
+    },
     mounted: function() {
       let _self = this;
       let $table = $('#orderTable');
