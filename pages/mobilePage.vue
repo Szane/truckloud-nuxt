@@ -971,6 +971,7 @@ export default {
     }
     .free-contact hr {
         width: 280px;
+        margin-left: 40px;
         border:none;
         border-top:1px solid #292929;
     }
