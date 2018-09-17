@@ -478,13 +478,11 @@ export default {
             common.changeTableClass($table)
         }
 
-        function getInit() {
-          let getInit = async () => {
-            let response = await request.post(transNodeApiUrl + 'i', {});
-            _self.pagePara = response.data.info;
-            initTable();
-          };
-        }
+        let getInit = async () => {
+          let response = await request.post(transNodeApiUrl + 'i', {});
+          _self.pagePara = response.data.info;
+          initTable();
+        };
 
         function initPage() {
             //let page horizontally

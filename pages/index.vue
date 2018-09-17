@@ -514,7 +514,7 @@
       let $table = $('#orderTable');
 
       if (common.isMobile()) {
-                _self.$router.replace('/mobilePage');
+        _self.$router.replace('/mobilePage');
 //        let hostName = window.location.hostname;
 //        let splitArray = hostName.split('.');
 //        if (splitArray[1] === 'truckloud') {
