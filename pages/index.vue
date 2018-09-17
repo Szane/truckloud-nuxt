@@ -513,14 +513,14 @@
       let _self = this;
       let $table = $('#orderTable');
 
-//      if (common.isMobile()) {
-////                _self.$router.replace('/mobile');
+      if (common.isMobile()) {
+                _self.$router.replace('/mobilePage');
 //        let hostName = window.location.hostname;
 //        let splitArray = hostName.split('.');
 //        if (splitArray[1] === 'truckloud') {
 //          window.location.href = 'http://www.m.truckloud.com'
 //        }
-//      }
+      }
       window.tableEvents = {
         'click .detail': function (e, value, row, index) {
           _self.containerAbstract = null;
